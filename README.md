@@ -30,3 +30,4 @@ Notes
 - The backend contains a simple `MockInterviewer` that delegates to `LLMService`. Ensure you provide LLM credentials in `backend/.env` if you plan to use OpenAI/Groq providers.
 - This is intentionally minimal to be easy to run and extend.
 
+![alt text](image.png)
