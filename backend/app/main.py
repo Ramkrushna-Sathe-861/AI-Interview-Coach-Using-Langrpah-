@@ -21,3 +21,4 @@ app.include_router(interview_router, prefix="/api/interview")
 @app.get("/")
 def root():
     return {"service": "InterviewPilot-AI Backend", "status": "ready"}
+
