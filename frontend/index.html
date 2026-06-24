@@ -1,12 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Interview Coach UI</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>InterviewPilot Chat</title>
+    <style>
+      body{font-family:Arial,Helvetica,sans-serif;margin:32px}
+      textarea,input{width:100%;box-sizing:border-box;margin:8px 0;padding:8px}
+      button{padding:8px 12px}
+      #output{white-space:pre-wrap;background:#f7f7f7;padding:12px;border-radius:6px}
+    </style>
   </head>
   <body>
+    <!--
+      This is the single HTML page that loads the React app.
+      - The <div id="root"> element is the mount point for React.
+      - Vite will load the module at /src/main.tsx which bootstraps React.
+
+      For beginners: Think of this file as the "index" HTML that the browser
+      opens. The React app takes over within the #root element and renders
+      all UI from JavaScript/TypeScript code under the `src/` folder.
+    -->
     <div id="root"></div>
-    <script type="module" src="src/main.tsx"></script>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
