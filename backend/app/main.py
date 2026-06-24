@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from app.api.dashboard import router as dashboard_router
 from app.api.interview import router as interview_router
 
 app = FastAPI(
@@ -17,8 +18,14 @@ app.add_middleware(
 )
 
 app.include_router(interview_router, prefix="/api/interview")
+app.include_router(dashboard_router)
 
 @app.get("/")
 def root():
     return {"service": "InterviewPilot-AI Backend", "status": "ready"}
+
+
+@app.get("/health")
+def health():
+    return {"status": "ok"}
 
